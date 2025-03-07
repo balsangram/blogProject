@@ -11,7 +11,7 @@ router.use('/admin/',adminRoutes);
 router.use('/',authRoutes);
 router.use('/comment/', commentRoutes);
 router.use('/post/',postRoutes);
-router.use('/report/',reportRoutes)
+// router.use('/report/',reportRoutes)
 
 module.exports = (router);
 

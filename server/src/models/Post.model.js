@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
-const {schema} = mongoose;
+const {Schema} = mongoose;
 
-const postSchema = new schema({
+const postSchema = new Schema({
 userId:{
     type:String,
     require:true

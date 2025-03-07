@@ -1,11 +1,11 @@
-const mongoose = require(mongoose);
+const mongoose = require("mongoose");
+const Comment = require("../models/Comment")
+const { Schema } = mongoose;
 
-const { schema } = mongoose;
-
-const userSchema = new schema(
+const userSchema = new Schema(
   {
     avatar: {
-        type:Buffer
+      type: Buffer,
     },
     name: {
       type: String,
@@ -19,15 +19,18 @@ const userSchema = new schema(
       type: String,
       require: true,
     },
+    password:{
+      type:String,
+      require: true
+    },
     type: {
-      enum: [],
-    },
-    comment: {
-
-    },
+      type:String,
+      enum: ['admin','user'],
+      default:"user"
+    }
   },
   { timestamps: true }
 );
 
-const User = mongoose.module("User", userSchema);
-module.exports(User);
+const User = mongoose.model("User", userSchema);
+module.exports = User;

@@ -1,4 +1,4 @@
-const comment = require("@/models/Comment")
+const comment = require("../models/Comment")
 
 const addComments = async()=>{
     try {
@@ -16,4 +16,4 @@ const deleteCommments = async ()=>{
     }
 } 
 
-modules.exports={addComments,deleteCommments}
+module.exports={addComments,deleteCommments}
